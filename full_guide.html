@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Being Human — IB HL Philosophy Study Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1208;
+    --ink-light: #4a3f2f;
+    --paper: #faf8f3;
+    --paper-warm: #f2ede0;
+    --paper-mid: #e8e0cc;
+    --accent: #7c3d12;
+    --accent-light: #b85c2a;
+    --accent-pale: #f5ece0;
+    --rule: #c8bda8;
+    --blue: #1a3a5c;
+    --blue-pale: #e8f0f8;
+    --green: #1a3d2a;
+    --green-pale: #e6f0e8;
+    --purple: #3a1a5c;
+    --purple-pale: #ede8f5;
+    --teal: #0f4a4a;
+    --teal-pale: #e2f0f0;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.75;
+    font-size: 16px;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0;
+    width: 260px;
+    height: 100vh;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 2rem 1.5rem;
+    overflow-y: auto;
+    z-index: 100;
+  }
+
+  nav h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+
+  nav ul { list-style: none; }
+  nav ul li { margin-bottom: 0.2rem; }
+
+  nav ul li a {
+    display: block;
+    padding: 0.3rem 0.5rem;
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    font-size: 13px;
+    font-family: 'Source Serif 4', serif;
+    border-radius: 3px;
+    transition: all 0.15s;
+  }
+
+  nav ul li a:hover {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+  }
+
+  nav ul li.section > a {
+    color: rgba(255,255,255,0.9);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 1rem;
+  }
+
+  nav ul li.subsection > a {
+    padding-left: 1rem;
+    font-size: 12px;
+  }
+
+  /* MAIN */
+  main {
+    margin-left: 260px;
+    padding: 0;
+    max-width: none;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 5rem 5rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 400px; height: 400px;
+    border: 60px solid rgba(255,255,255,0.03);
+    border-radius: 50%;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; right: 80px;
+    width: 250px; height: 250px;
+    border: 40px solid rgba(255,255,255,0.04);
+    border-radius: 50%;
+  }
+
+  .hero-label {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin-bottom: 1rem;
+    font-family: 'Source Serif 4', serif;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+  }
+
+  .hero p {
+    font-size: 17px;
+    color: rgba(255,255,255,0.65);
+    max-width: 600px;
+    font-style: italic;
+    line-height: 1.7;
+  }
+
+  .hero-meta {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 2.5rem;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* CONTENT */
+  .content {
+    padding: 0 5rem 5rem;
+  }
+
+  /* SECTION */
+  .section {
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .section-number {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin-bottom: 0.5rem;
+    font-family: 'Source Serif 4', serif;
+  }
+
+  .section > h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--ink);
+  }
+
+  .section-intro {
+    font-size: 17px;
+    color: var(--ink-light);
+    font-style: italic;
+    max-width: 780px;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--paper-mid);
+  }
+
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 2.5rem 0 1rem;
+    color: var(--ink);
+  }
+
+  h4 {
+    font-family: 'Source Serif 4', serif;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 1.5rem 0 0.6rem;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+  }
+
+  p { margin-bottom: 1rem; max-width: 780px; }
+
+  strong { font-weight: 600; }
+  em { font-style: italic; }
+
+  /* THINKER CARD */
+  .thinker-card {
+    background: var(--paper-warm);
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--accent);
+    padding: 1.5rem 1.75rem;
+    margin: 1.5rem 0;
+    max-width: 780px;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .thinker-card .thinker-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.3rem;
+  }
+
+  .thinker-card .thinker-dates {
+    font-size: 12px;
+    color: var(--ink-light);
+    letter-spacing: 0.08em;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+  }
+
+  .thinker-card .thinker-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 2px;
+    margin-bottom: 0.75rem;
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+  }
+
+  .tag-rationalist { background: var(--blue-pale); color: var(--blue); }
+  .tag-irrationalist { background: var(--purple-pale); color: var(--purple); }
+  .tag-empiricist { background: var(--green-pale); color: var(--green); }
+  .tag-relativist { background: var(--teal-pale); color: var(--teal); }
+  .tag-existentialist { background: #f5ede8; color: #5c2a0f; }
+
+  /* CONCEPT BOX */
+  .concept-box {
+    background: #fff;
+    border: 1px solid var(--rule);
+    padding: 1.5rem 1.75rem;
+    margin: 1.5rem 0;
+    max-width: 780px;
+    border-radius: 4px;
+  }
+
+  .concept-box h4 {
+    margin-top: 0;
+    color: var(--blue);
+    font-size: 16px;
+  }
+
+  /* DEBATE BOX */
+  .debate {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+    max-width: 780px;
+  }
+
+  .debate-side {
+    background: var(--paper);
+    padding: 1.25rem 1.5rem;
+  }
+
+  .debate-side.for { border-top: 3px solid var(--green); }
+  .debate-side.against { border-top: 3px solid #8b1a1a; }
+
+  .debate-label {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-family: 'Source Serif 4', serif;
+  }
+
+  .debate-side.for .debate-label { color: var(--green); }
+  .debate-side.against .debate-label { color: #8b1a1a; }
+
+  /* EXAM TIP */
+  .exam-tip {
+    background: #fffbec;
+    border: 1px solid #d4aa50;
+    border-left: 4px solid #b8860b;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+    max-width: 780px;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .exam-tip::before {
+    content: 'Exam Focus';
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #b8860b;
+    margin-bottom: 0.4rem;
+    font-family: 'Source Serif 4', serif;
+  }
+
+  /* QUOTE */
+  blockquote {
+    border-left: 3px solid var(--accent);
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: var(--ink-light);
+    max-width: 680px;
+    font-size: 17px;
+  }
+
+  blockquote cite {
+    display: block;
+    font-size: 13px;
+    font-style: normal;
+    margin-top: 0.5rem;
+    letter-spacing: 0.05em;
+    color: var(--accent-light);
+  }
+
+  /* KEY TERMS GRID */
+  .terms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+    max-width: 780px;
+  }
+
+  .term {
+    background: var(--paper);
+    padding: 1rem 1.125rem;
+  }
+
+  .term-name {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 0.35rem;
+    color: var(--accent);
+    font-family: 'Source Serif 4', serif;
+  }
+
+  .term-def {
+    font-size: 13px;
+    color: var(--ink-light);
+    line-height: 1.5;
+  }
+
+  /* LIST */
+  ul, ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+    max-width: 760px;
+  }
+
+  li { margin-bottom: 0.4rem; }
+
+  /* DIVIDER */
+  .part-divider {
+    background: var(--paper-warm);
+    padding: 2rem 5rem;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin: 0 -5rem;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    font-family: 'Source Serif 4', serif;
+  }
+
+  /* Scrollbar */
+  nav::-webkit-scrollbar { width: 4px; }
+  nav::-webkit-scrollbar-track { background: transparent; }
+  nav::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 2px; }
+
+  @media print {
+    nav { display: none; }
+    main { margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <h2>Being Human</h2>
+  <ul>
+    <li class="section"><a href="#human-nature">I. Human Nature</a></li>
+    <li class="subsection"><a href="#rationalists">Rationalists</a></li>
+    <li class="subsection"><a href="#irrationalists">Irrationalists</a></li>
+    <li class="subsection"><a href="#blank-slate">Blank Slate</a></li>
+    <li class="subsection"><a href="#nominalists">Nominalists/Empiricists</a></li>
+    <li class="subsection"><a href="#relativists">Relativists</a></li>
+    <li class="section"><a href="#personhood">II. Personhood</a></li>
+    <li class="subsection"><a href="#conditions">Conditions</a></li>
+    <li class="subsection"><a href="#criteria">Criteria of Personhood</a></li>
+    <li class="subsection"><a href="#machines">Machines & Personhood</a></li>
+    <li class="section"><a href="#consciousness">III. Consciousness</a></li>
+    <li class="subsection"><a href="#mind-body">Mind-Body Problem</a></li>
+    <li class="subsection"><a href="#descartes-found">Descartes' Foundationalism</a></li>
+    <li class="subsection"><a href="#ryle">Ryle & the Ghost</a></li>
+    <li class="subsection"><a href="#other-minds">Other Minds</a></li>
+    <li class="subsection"><a href="#functionalism">Functionalism</a></li>
+    <li class="section"><a href="#freedom">IV. Freedom</a></li>
+    <li class="subsection"><a href="#freewill">Free Will</a></li>
+    <li class="subsection"><a href="#determinism">Determinism</a></li>
+    <li class="subsection"><a href="#compatibilism">Compatibilism</a></li>
+    <li class="subsection"><a href="#existentialism">Existentialism</a></li>
+    <li class="section"><a href="#self-other">V. Self & the Other</a></li>
+    <li class="section"><a href="#identity">VI. Identity</a></li>
+    <li class="section"><a href="#exam-strategy">Exam Strategy</a></li>
+
+    <li class="section"><a href="#ethics">Optional: Ethics</a></li>
+    <li class="subsection"><a href="#meta-ethics">Meta-Ethics</a></li>
+    <li class="subsection"><a href="#cognitivism">Cognitivism & Realism</a></li>
+    <li class="subsection"><a href="#non-cognitivism">Non-Cognitivism</a></li>
+    <li class="subsection"><a href="#normative-ethics">Normative Ethics</a></li>
+    <li class="subsection"><a href="#virtue-ethics">Virtue Ethics</a></li>
+    <li class="subsection"><a href="#natural-law">Natural Law</a></li>
+    <li class="subsection"><a href="#deontology">Deontology / Kant</a></li>
+    <li class="subsection"><a href="#consequentialism">Consequentialism</a></li>
+    <li class="subsection"><a href="#applied-ethics">Applied Ethics</a></li>
+
+    <li class="section"><a href="#polphil">Optional: Political Philosophy</a></li>
+    <li class="subsection"><a href="#state-of-nature">State of Nature</a></li>
+    <li class="subsection"><a href="#justifying-state">Justifying the State</a></li>
+    <li class="subsection"><a href="#who-should-rule">Who Should Rule?</a></li>
+    <li class="subsection"><a href="#liberty">Place of Liberty</a></li>
+    <li class="subsection"><a href="#distributive-justice">Distributive Justice</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<div class="hero">
+  <div class="hero-label">IB HL Philosophy · Paper 1 Section A · Core Theme</div>
+  <h1>Being Human</h1>
+  <p>A comprehensive philosophical examination of human nature, personhood, consciousness, freedom, the self, and identity — everything you need for the Paper 1 Section A exam.</p>
+  <div class="hero-meta">
+    <span>Six Major Topics</span>
+    <span>All Key Thinkers</span>
+    <span>Exam-Ready Analysis</span>
+  </div>
+</div>
+
+<div class="content">
+
+<!-- ============================================================ -->
+<!-- SECTION I: HUMAN NATURE -->
+<!-- ============================================================ -->
+<section class="section" id="human-nature">
+  <div class="section-number">Section I</div>
+  <h2>Human Nature</h2>
+  <p class="section-intro">What is a human being, fundamentally? What drives us — reason, instinct, culture, or something else entirely? The debate over human nature is one of the oldest in philosophy, and the positions staked out here shape every other topic on the exam.</p>
+
+  <!-- RATIONALISTS -->
+  <h3 id="rationalists">Rationalists</h3>
+
+  <p>Rationalists hold that <strong>reason is the defining and most reliable feature of human beings</strong>. Our capacity to think logically and access knowledge through pure intellect — independent of the senses — is what makes us distinctively human. Knowledge comes from within (innate ideas), not from the chaotic world of experience.</p>
+
+  <div class="thinker-card">
+    <div class="thinker-name">Plato</div>
+    <div class="thinker-dates">427–347 BCE</div>
+    <span class="thinker-tag tag-rationalist">Rationalist</span>
+    <p><strong>The tripartite soul:</strong> Plato divides the human soul into three parts — <em>reason</em> (the highest faculty, located in the head), <em>spirit/thumos</em> (courage and honour, in the chest), and <em>appetite/desire</em> (bodily desires and pleasures, in the belly). A well-ordered, just human being is one in which reason governs spirit and appetite. When appetite rules — when we are driven by lust, greed, or pleasure — we are disordered and unfree.</p>
+    <p><strong>The Theory of Forms:</strong> True knowledge is of the eternal, unchanging Forms (e.g., the Form of Beauty, the Form of Justice). The material world is merely a shadow of these perfect realities. Our souls, before birth, dwelt in the realm of Forms — so learning is actually <em>anamnesis</em> (recollection). This is why reason, which can access the Forms, is superior to the senses, which only perceive imperfect copies.</p>
+    <p><strong>The Allegory of the Cave:</strong> Ordinary people are like prisoners chained in a cave, mistaking shadows on the wall for reality. The philosopher, using reason, breaks free and sees the sun (the Form of the Good). Human flourishing (<em>eudaimonia</em>) requires this rational ascent.</p>
+    <p><strong>Implication for human nature:</strong> We are essentially rational, immortal souls temporarily housed in mortal bodies. Our true self is the rational soul; the body is a prison or tomb. Human excellence lies in developing reason and controlling base desires.</p>
+  </div>
+
+  <div class="thinker-card">
+    <div class="thinker-name">René Descartes</div>
+    <div class="thinker-dates">1596–1650</div>
+    <span class="thinker-tag tag-rationalist">Rationalist</span>
+    <p><strong>The Method of Doubt / Radical Doubt:</strong> Descartes sought absolutely certain foundations for knowledge. He systematically doubted everything that could possibly be doubted — the senses (which deceive us), the external world, even mathematics (could an evil demon be deceiving him?). He found one thing beyond doubt: <em>Cogito ergo sum</em> — "I think, therefore I am." The very act of doubting proves there is a doubter. He could not doubt that he was doubting.</p>
+    <p><strong>Substance Dualism:</strong> From the Cogito, Descartes concluded that he was, essentially, a <em>thinking thing</em> (res cogitans) — a non-material mind. The body, by contrast, is a res extensa — extended, physical, mechanical. Mind and body are two entirely distinct substances. The mind is indivisible and non-spatial; the body is divisible and spatial.</p>
+    <p><strong>The Union of Mind and Body:</strong> But then how do they interact? Descartes controversially proposed that mind and body interact via the <em>pineal gland</em>. This is widely considered his weakest move — it struggles to explain how an immaterial substance can causally affect a material one.</p>
+    <p><strong>Innate Ideas:</strong> Descartes held that certain ideas — God, mathematical truths, the self — are innate, placed in the mind by God and accessible through reason alone, not derived from experience.</p>
+  </div>
+
+  <div class="exam-tip">
+    <strong>Key contrast to make:</strong> Rationalists (Plato, Descartes) believe our most important characteristic is <em>reason</em> and that the self is fundamentally a rational, non-material mind. This directly conflicts with empiricists (Hume) who deny innate ideas, irrationalists (Freud, Darwin) who see reason as secondary, and blank-slate theorists (Locke, Watson) who deny any innate structure to the mind at all.
+  </div>
+
+  <!-- IRRATIONALISTS -->
+  <h3 id="irrationalists">Irrationalists</h3>
+
+  <p>Irrationalists challenge the Enlightenment assumption that reason is humanity's defining feature. They argue that beneath the surface of rational behavior lie deeper, more powerful forces — biological drives, unconscious desires, or the will to power.</p>
+
+  <div class="thinker-card">
+    <div class="thinker-name">Charles Darwin</div>
+    <div class="thinker-dates">1809–1882</div>
+    <span class="thinker-tag tag-irrationalist">Irrationalist / Naturalist</span>
+    <p><strong>Natural Selection & Evolution:</strong> Darwin's theory of evolution by natural selection, published in <em>On the Origin of Species</em> (1859), fundamentally destabilized the traditional view of human nature. Humans are not a special creation endowed with reason by God — they are animals, continuous with the rest of the natural world, shaped by the blind process of natural selection.</p>
+    <p><strong>Implications for human nature:</strong> Our behaviors, instincts, emotions, and social tendencies are not uniquely rational but are adaptations for survival and reproduction. What we call "reason" may itself be an adaptive trait — a tool for survival, not the essence of our being. Human beings are fundamentally <em>biological organisms</em> whose nature is determined by evolutionary history.</p>
+    <p><strong>Continuity thesis:</strong> There is no sharp line between humans and animals. This challenges the rationalist claim that reason sets us apart. Darwin's <em>The Descent of Man</em> (1871) explicitly extended evolutionary theory to human mental faculties and moral sense, arguing these too evolved gradually.</p>
+    <p><strong>Challenge to essentialism:</strong> Darwin's thinking undermines the idea that there is a fixed, eternal human essence or nature. Species are historical, contingent, and always in flux. There is no Platonic Form of "human."</p>
+  </div>
+
+  <div class="thinker-card">
+    <div class="thinker-name">Sigmund Freud</div>
+    <div class="thinker-dates">1856–1939</div>
+    <span class="thinker-tag tag-irrationalist">Irrationalist / Psychoanalyst</span>
+    <p><strong>The Unconscious:</strong> Freud's most revolutionary idea is that the mind is mostly hidden from itself. The <em>unconscious</em> is a vast repository of repressed desires, traumatic memories, and primal drives that powerfully shape our behavior — without our knowing it. What we consciously experience is merely the tip of the iceberg.</p>
+    <p><strong>The Tripartite Psyche — Id, Ego, Superego:</strong></p>
+    <ul>
+      <li><strong>Id:</strong> The primitive, unconscious reservoir of instinctual drives — primarily <em>Eros</em> (life/libido/sexual drive) and <em>Thanatos</em> (death drive/aggression). The id operates on the pleasure principle: immediate gratification, regardless of reality or morality.</li>
+      <li><strong>Ego:</strong> The rational, conscious self that navigates the real world. Operates on the reality principle — mediating between the id's demands and the constraints of reality. The ego is the seat of what we think of as "reason," but it is merely a manager of deeper forces.</li>
+      <li><strong>Superego:</strong> The internalized moral conscience — societal rules and parental authority absorbed into the psyche. Often in conflict with the id; can generate guilt and anxiety.</li>
+    </ul>
+    <p><strong>Defense mechanisms:</strong> When the ego cannot manage the id's demands, it employs defense mechanisms — <em>repression</em> (pushing desires into the unconscious), <em>sublimation</em> (channeling drives into socially acceptable activity), <em>projection</em> (attributing one's own desires to others), etc. Culture itself (art, religion, law) may be understood as collective sublimation of the death drive.</p>
+    <p><strong>Implication for human nature:</strong> We are not primarily rational beings. We are driven by unconscious biological drives that reason barely controls. The self — the ego — is not master in its own house. This radically undermines the Cartesian "thinking self."</p>
+  </div>
+
+  <div class="thinker-card">
+    <div class="thinker-name">Friedrich Nietzsche</div>
+    <div class="thinker-dates">1844–1900</div>
+    <span class="thinker-tag tag-irrationalist">Irrationalist / Existentialist precursor</span>
+    <p><strong>The Will to Power:</strong> For Nietzsche, the most fundamental drive in human beings is not reason, not pleasure, not survival, but the <em>will to power</em> (<em>Wille zur Macht</em>) — the drive to grow, to overcome, to create, to dominate. This is not merely a desire for political power but an affirmative creative force.</p>
+    <p><strong>Critique of rationalism and morality:</strong> Nietzsche sees the Platonic-Christian tradition as a <em>slave morality</em> — a morality created by the weak to constrain the strong, which devalues life, celebrates passivity, and represses the will to power in favor of "reason" and "virtue." Traditional morality is not a rational truth but a historical power-play.</p>
+    <p><strong>"God is dead":</strong> With the collapse of the Christian worldview, traditional morality loses its foundations. This creates a crisis of meaning — nihilism. Nietzsche's response is not despair but the creation of new values. The <em>Übermensch</em> (Overman) is the one who overcomes nihilism by creating their own values from the will to power.</p>
+    <p><strong>Perspectivism:</strong> There is no objective, God's-eye view of truth. All knowledge is perspectival — from a particular standpoint with particular interests. This anticipates relativism (Kuhn, Foucault).</p>
+    <p><strong>Critique of the self:</strong> Nietzsche also attacks the idea of a unified, stable self (à la Descartes). The "I" is a grammatical fiction — a convenient simplification of a constantly shifting multiplicity of drives and affects.</p>
+  </div>
+
+  <!-- BLANK SLATE -->
+  <h3 id="blank-slate">The Blank Slate (Tabula Rasa)</h3>
+
+  <p>The blank slate position holds that humans are born with <strong>no innate ideas, traits, or dispositions</strong>. We are entirely the product of our experience and environment. This challenges both rationalism (which posits innate ideas) and deterministic views of human nature (biological or otherwise).</p>
+
+  <div class="thinker-card">
+    <div class="thinker-name">John Locke</div>
+    <div class="thinker-dates">1632–1704</div>
+    <span class="thinker-tag tag-empiricist">Empiricist</span>
+    <p><strong>Tabula Rasa:</strong> In his <em>Essay Concerning Human Understanding</em> (1689), Locke argued against Descartes' innate ideas. The mind at birth is a <em>tabula rasa</em> — a blank slate. All knowledge comes from experience. He distinguishes two sources: <em>sensation</em> (external experience of the world through the senses) and <em>reflection</em> (internal awareness of our own mental operations). Complex ideas are built up from simple ideas derived from sensation and reflection.</p>
+    <p><strong>Primary and secondary qualities:</strong> Locke distinguishes qualities that exist in objects themselves (primary: shape, size, motion, solidity) from qualities that exist only in the perceiver's mind (secondary: color, smell, taste, sound). This begins to raise questions about our access to reality that Hume will deepen.</p>
+    <p><strong>Implications for human nature:</strong> Since there are no innate ideas, human nature is extraordinarily malleable. People are shaped primarily by education and environment. This has radical political implications — it supports reformist politics, since changing social conditions can change people. It also underpins liberal individualism: individuals are not determined by birth or essence.</p>
+    <p><strong>Personal identity:</strong> Locke also gives an important account of personal identity (relevant to Section VI). He argues that identity consists in <em>continuity of consciousness</em> — specifically, memory. You are the same person as the child you were because you can (in principle) remember being that child. This is memory theory of personal identity.</p>
+  </div>
+
+  <div class="thinker-card">
+    <div class="thinker-name">John B. Watson</div>
+    <div class="thinker-dates">1878–1958</div>
+    <span class="thinker-tag tag-empiricist">Behaviourist</span>
+    <p><strong>Behaviourism:</strong> Watson, the founder of behaviourism in psychology, took the blank slate to its scientific extreme. He argued that psychology should study only observable <em>behaviour</em>, not unobservable mental states, consciousness, or introspection — these are not scientifically tractable. He famously claimed he could take any healthy infant and, given full control of its environment, make it into any kind of specialist — doctor, lawyer, thief, beggar — regardless of its ancestry.</p>
+    <p><strong>Stimulus-Response:</strong> Human behavior is entirely a function of <em>stimuli and responses</em> — conditioning. B.F. Skinner's later work (<em>operant conditioning</em>) develops this further.</p>
+    <p><strong>Challenges:</strong> Behaviourism ignores mental states, consciousness, and inner experience — all of which are central to later discussions of personhood and consciousness. Chomsky's argument that children learn language far too fast for pure conditioning — suggesting innate grammatical structures — was a major blow to behaviourism.</p>
+  </div>
+
+  <!-- NOMINALISTS / EMPIRICISTS -->
+  <h3 id="nominalists">Nominalists / Empiricists</h3>
+
+  <p>Empiricists hold that all knowledge derives from experience — there is no a priori (prior to experience) knowledge of the world. Nominalists deny that abstract universals (like "humanity") have real existence — only particular things exist, and general terms are just names.</p>
+
+  <div class="thinker-card">
+    <div class="thinker-name">Thomas Hobbes</div>
+    <div class="thinker-dates">1588–1679</div>
+    <span class="thinker-tag tag-empiricist">Materialist / Nominalist</span>
+    <p><strong>Materialism:</strong> Hobbes was a thoroughgoing materialist — everything that exists is matter in motion, including the mind. Thought, sensation, and desire are all just the motions of matter in the brain. He was one of the first thinkers to apply mechanistic physics to the human mind and society.</p>
+    <p><strong>The State of Nature:</strong> Without a sovereign to enforce order, human life in the <em>state of nature</em> is "solitary, poor, nasty, brutish, and short." Humans are naturally competitive, distrustful, and glory-seeking. This is not a moral judgment but a descriptive claim about human psychology — we are driven by self-preservation and desire for power.</p>
+    <p><strong>Nominalism:</strong> Hobbes held that only particular things exist. General words like "human being" or "justice" are just names — useful fictions — not real entities in the world. There is no such thing as Plato's Form of humanity. This is a direct challenge to rationalist essentialism.</p>
+    <p><strong>Social contract:</strong> To escape the horror of the state of nature, rational self-interested individuals agree to submit to a sovereign (the Leviathan). Society and morality are therefore human constructions, not given by God or nature.</p>
+  </div>
+
+  <div class="thinker-card">
+    <div class="thinker-name">David Hume</div>
+    <div class="thinker-dates">1711–1776</div>
+    <span class="thinker-tag tag-empiricist">Empiricist / Sceptic</span>
+    <p><strong>Impressions and Ideas:</strong> Hume radicalises Locke's empiricism. All genuine knowledge derives from <em>impressions</em> (vivid, direct sensory experiences) or from <em>ideas</em> (fainter copies of impressions). Any concept that cannot be traced back to an impression is meaningless — "a mere word." This is a powerful tool of philosophical critique: if you can't point to the impression behind a concept, dismiss it.</p>
+    <p><strong>Critique of causation:</strong> We never actually perceive <em>causation</em> itself — only constant conjunction (A always followed by B). Causation is a habit of mind, not a feature of reality. This is deeply sceptical and has enormous consequences for science and metaphysics.</p>
+    <p><strong>The Bundle Theory of the Self:</strong> This is crucial for the Identity section. Hume denies that there is a unified, persistent self. When he looks inward, he finds only a "bundle of perceptions" — a rapid succession of sensations, emotions, and thoughts. There is no impression of a persistent "I" that ties them together. The self is just a bundle, a fiction created by the mind's associative tendencies. This directly challenges Descartes' Cogito (which posits a thinking self that is the most certain of all things).</p>
+    <p><strong>Reason as slave of the passions:</strong> "Reason is, and ought only to be the slave of the passions, and can never pretend to any other office than to serve and obey them." Reason alone can never motivate action — it only tells us about means, not ends. Desire and emotion are what drive us to act. This challenges the rationalist picture of humans as fundamentally rational agents.</p>
+    <p><strong>Problem of other minds:</strong> Since all I have access to is my own bundle of perceptions, how do I know that other people have minds? Hume's empiricism makes this problem acute. (See Section III.)</p>
+  </div>
+
+  <!-- RELATIVISTS -->
+  <h3 id="relativists">Relativists</h3>
+
+  <p>Relativists argue that knowledge, truth, and human nature cannot be understood as objective, universal, or fixed. They are always relative to a historical period, culture, conceptual framework, or power structure.</p>
+
+  <div class="thinker-card">
+    <div class="thinker-name">Thomas Kuhn</div>
+    <div class="thinker-dates">1922–1996</div>
+    <span class="thinker-tag tag-relativist">Relativist (Epistemological)</span>
+    <p><strong>The Structure of Scientific Revolutions (1962):</strong> Kuhn challenged the standard view of science as a steady accumulation of objective knowledge. Instead, science operates within <em>paradigms</em> — dominant theoretical frameworks (e.g., Newtonian mechanics, Ptolemaic astronomy) that determine what counts as a problem, what counts as evidence, and what counts as a solution.</p>
+    <p><strong>Normal science vs. revolutionary science:</strong> Most of the time, scientists engage in <em>normal science</em> — puzzle-solving within the accepted paradigm. When anomalies accumulate (problems the paradigm can't solve), a crisis occurs, leading to a <em>paradigm shift</em> — a scientific revolution (e.g., Copernican revolution, Einsteinian physics).</p>
+    <p><strong>Incommensurability:</strong> Different paradigms may be <em>incommensurable</em> — they use different concepts, ask different questions, and cannot be straightforwardly compared. Scientists working within different paradigms may, in a sense, inhabit different worlds. This is why Kuhn is considered a relativist: there is no neutral, paradigm-independent standard of scientific truth.</p>
+    <p><strong>Implication for human nature:</strong> Our understanding of what it means to be human is itself paradigm-dependent. The "scientific" view of human nature is not simply a mirror of reality but a product of particular historical and cultural frameworks.</p>
+  </div>
+
+  <div class="thinker-card">
+    <div class="thinker-name">Michel Foucault</div>
+    <div class="thinker-dates">1926–1984</div>
+    <span class="thinker-tag tag-relativist">Relativist (Power/Knowledge)</span>
+    <p><strong>Power/Knowledge:</strong> Foucault's most radical contribution is the claim that <em>knowledge and power are inseparable</em>. What counts as truth, reason, or sanity is always the product of power relations — "regimes of truth" maintained by institutions (medicine, psychiatry, law, education). Knowledge is never neutral — it always serves power.</p>
+    <p><strong>The Human Sciences:</strong> In <em>The Order of Things</em> (1966), Foucault argues that "Man" (as a subject of knowledge — human nature, human psychology, human society) is a relatively recent invention, emerging in the late 18th century. The very concept of a universal human nature is a historical product of particular epistemic conditions (<em>épistèmes</em>). He famously predicts that "man would be erased, like a face drawn in sand at the edge of the sea."</p>
+    <p><strong>Genealogy and Discourse:</strong> Foucault uses <em>genealogy</em> (inspired by Nietzsche) to reveal how apparently natural or universal truths — about madness, sexuality, criminality — are historically contingent products of discourse and power. There is no essential human nature beneath discourse.</p>
+    <p><strong>Critique of the subject:</strong> Foucault challenges the idea of a free, autonomous subject (the Enlightenment ideal). Subjects are produced by power relations — "docile bodies" shaped by disciplinary institutions (Bentham's Panopticon is his key example). We are not born with a self — the self is a product of historically specific practices of subjectification.</p>
+  </div>
+
+  <div class="exam-tip">
+    <strong>Synoptic link:</strong> The human nature section underpins everything. Rationalists support strong views of personal identity, free will, and consciousness as non-physical. Empiricists/irrationalists tend toward determinism or scepticism about the self. Relativists challenge universal claims about personhood and identity. Always trace positions back to these foundational commitments in your essays.
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION II: PERSONHOOD -->
+<!-- ============================================================ -->
+<section class="section" id="personhood">
+  <div class="section-number">Section II</div>
+  <h2>Personhood</h2>
+  <p class="section-intro">What distinguishes a <em>person</em> from a mere <em>human being</em> — or from an animal, or a machine? This section examines the criteria for personhood and what they imply about moral status, AI, and our own nature.</p>
+
+  <h3 id="conditions">Sufficient and Necessary Conditions</h3>
+
+  <p>Philosophy uses the language of conditions to define concepts precisely. Understanding this logic is essential for analysing arguments about personhood.</p>
+
+  <div class="terms-grid">
+    <div class="term">
+      <div class="term-name">Necessary Condition</div>
+      <div class="term-def">A condition that <em>must</em> be present for X to be the case, but is not alone sufficient. If the condition is absent, X cannot be the case. E.g., having a brain may be necessary for consciousness, but is not sufficient (you also need the right kind of activity).</div>
+    </div>
+    <div class="term">
+      <div class="term-name">Sufficient Condition</div>
+      <div class="term-def">A condition whose presence <em>guarantees</em> X is the case, but X may also be achievable in other ways. E.g., being human might be considered sufficient for personhood, but personhood might also be achievable by sufficiently advanced AIs.</div>
+    </div>
+    <div class="term">
+      <div class="term-name">Jointly Sufficient</div>
+      <div class="term-def">A set of conditions that together guarantee X. In debates about personhood, philosophers often propose a list of criteria that are individually necessary and jointly sufficient.</div>
+    </div>
+  </div>
+
+  <div class="exam-tip">
+    <strong>Exam technique:</strong> When an exam question asks you to evaluate criteria for personhood, always be ready to ask: Is this criterion necessary? Is it sufficient? Could something lack this criterion and still be a person? Could something have this criterion and still not be a person?
+  </div>
+
+  <h3 id="criteria">Criteria of Personhood</h3>
+
+  <p>Philosophers have proposed various criteria for personhood. Each picks out a feature that seems important to our intuitions about who counts as a moral patient deserving respect and rights. The key criteria you need to know are:</p>
+
+  <h4>Consciousness</h4>
+  <p><em>Consciousness</em> is the state of being subjectively aware — there is "something it is like" to be you (Thomas Nagel's famous formulation). A rock has no consciousness — there is nothing it is like to be a rock. A bat has consciousness — there is something it is like to be a bat (even if we cannot know what). Consciousness is widely considered necessary for personhood because moral status seems to require that there be a subject who can be harmed or benefited.</p>
+  <p><strong>Problem:</strong> We cannot directly observe consciousness in others (→ problem of other minds). We infer it from behavior and analogy with ourselves. This creates deep uncertainty about which entities are conscious.</p>
+
+  <h4>Self-Consciousness</h4>
+  <p><em>Self-consciousness</em> is not just awareness but <em>awareness of oneself as oneself</em> — the capacity to think "I am me," to have a concept of oneself as a continuing entity distinct from the world. Some philosophers (e.g., Kant, Locke) regard this as the distinctive mark of personhood. Animals may be conscious without being self-conscious (though research on great apes using mirror tests suggests some degree of self-recognition).</p>
+  <p>Descartes' Cogito establishes self-consciousness as the most certain fact about human existence. The ability to reflect on one's own existence is linked to <em>moral responsibility</em> and <em>authenticity</em>.</p>
+
+  <h4>Agency</h4>
+  <p><em>Agency</em> is the capacity to act — to initiate actions in the world based on reasons, desires, or intentions. A person is an agent, not merely a mechanism that responds to stimuli. Agency is closely connected to free will — genuine agency seems to require that one's actions are genuinely one's own, not just the product of prior causes.</p>
+  <p><strong>Distinction:</strong> A thermostat "acts" (adjusts temperature) but is not an agent — it has no intentions, no understanding of reasons. Does Deep Blue "act"? It makes moves — but does it have genuine intentional agency?</p>
+
+  <h4>Morality</h4>
+  <p>The capacity for <em>moral reasoning</em> — understanding the difference between right and wrong, having moral commitments and obligations — has been proposed as a criterion of personhood. Kant argued that only rational beings capable of recognizing and acting according to the moral law (the Categorical Imperative) have intrinsic dignity and deserve to be treated as ends in themselves, not merely as means.</p>
+  <p>This links morality closely to rationality. Animals, lacking reason (on Kant's view), have no moral status as persons, only indirect moral significance.</p>
+
+  <h4>Moral Responsibility</h4>
+  <p><em>Moral responsibility</em> — being the kind of entity that can be held responsible for its actions, that can be praised or blamed, rewarded or punished meaningfully — is another criterion. For Strawson (<em>Freedom and Resentment</em>, 1962), what makes someone a full moral participant is being the appropriate target of <em>reactive attitudes</em>: resentment, gratitude, indignation, love. We treat persons differently from objects precisely because we hold them responsible.</p>
+  <p>This is connected to free will: if hard determinism is true, no one is ever truly responsible for anything. Compatibilists argue moral responsibility is compatible with determinism.</p>
+
+  <h4>Authenticity</h4>
+  <p><em>Authenticity</em> — living in accordance with one's true self, freely chosen values, and genuine commitments — is especially associated with existentialism (Sartre, Heidegger). An inauthentic person lives according to external expectations, social roles, or "bad faith." A genuine person is one who confronts their freedom honestly and takes responsibility for who they are.</p>
+  <p>Authenticity as a criterion of full personhood suggests that not all humans are fully persons at all times — those living in bad faith are failing to exercise the distinctively human capacity for genuine self-determination.</p>
+
+  <h4>Anthropocentrism</h4>
+  <p><em>Anthropocentrism</em> is the view that human beings are uniquely important or valuable — the centre of the moral universe. A strongly anthropocentric view holds that only humans are persons; all other entities matter only instrumentally (as they affect human wellbeing).</p>
+  <p><strong>Critique:</strong> Peter Singer and others argue anthropocentrism is a form of "speciesism" — an arbitrary bias toward one's own species, analogous to racism. If sentience is what grounds moral status, then many non-human animals have moral status comparable to humans.</p>
+
+  <h4>Sentience</h4>
+  <p><em>Sentience</em> — the capacity to feel pleasure and pain — is the criterion proposed by utilitarian philosophers (Bentham: "The question is not, Can they reason? nor, Can they talk? but, Can they suffer?"). Sentience, not rationality or self-consciousness, is what grounds moral status. Any sentient being deserves moral consideration proportional to its capacity for suffering.</p>
+  <p>This is a much more inclusive criterion than rationality — it extends moral status to most animals, while potentially excluding entities that process information without feeling (like a sophisticated AI).</p>
+
+  <h3 id="machines">Machines and Personhood</h3>
+
+  <h4>The Deep Blue Chess Match</h4>
+  <p>In 1997, IBM's Deep Blue defeated world chess champion Garry Kasparov. This was a philosophical landmark because it showed a machine could outperform humans at a complex cognitive task that previously seemed distinctively human. The question: does Deep Blue's ability to play chess constitute intelligence, agency, or personhood?</p>
+  <p>Most philosophers say no. Deep Blue operates by brute-force calculation — evaluating millions of positions per second according to programmed evaluation functions. It has no understanding of the game, no intentions, no consciousness. It is a very sophisticated calculator. Dennett's distinction between taking the <em>intentional stance</em> (treating something as if it has beliefs and desires) vs. actually having intentionality is relevant here: we can predict Deep Blue's moves by treating it as intending to win, but this doesn't mean it actually intends anything.</p>
+
+  <h4>The Turing Test</h4>
+  <p>Proposed by Alan Turing in his 1950 paper "Computing Machinery and Intelligence," the Turing Test asks: can a machine behave indistinguishably from a human in conversation? If a human interrogator, communicating through text, cannot reliably distinguish between a human and a machine, the machine passes the Turing Test. Turing proposed this as a practical criterion for machine intelligence.</p>
+
+  <div class="debate">
+    <div class="debate-side for">
+      <div class="debate-label">For the Turing Test as a criterion</div>
+      <p style="font-size:14px;">Behaviourist-friendly: if we have no access to inner states, then behavioral equivalence is all we can ever use to attribute minds. If it walks like a duck and quacks like a duck... The Turing Test sets a high, concrete, testable standard. Passing it would be a genuine achievement that demands philosophical explanation.</p>
+    </div>
+    <div class="debate-side against">
+      <div class="debate-label">Against the Turing Test</div>
+      <p style="font-size:14px;"><strong>Searle's Chinese Room:</strong> Searle argues the Turing Test confuses <em>syntax</em> (manipulating symbols according to rules) with <em>semantics</em> (actually understanding meaning). A person in a room following rules to reply to Chinese characters passes the test without understanding Chinese. Similarly, a computer may pass the Turing Test without genuine understanding or consciousness. The test tests <em>simulation</em> of intelligence, not intelligence itself.</p>
+    </div>
+  </div>
+
+  <p><strong>Searle's Chinese Room in depth:</strong> Imagine you are locked in a room with Chinese symbols and a rulebook (in English) telling you how to respond to combinations of symbols. You receive Chinese input, consult the rulebook, and produce Chinese output. Native Chinese speakers on the outside think they are conversing with a Chinese speaker — you pass the Turing Test in Chinese. But you understand nothing. The room (and by analogy, the computer) has only syntactic rules, not semantic understanding. <em>Intentionality</em> (aboutness — the mind's capacity to be about things in the world) cannot be reduced to or simulated by symbol manipulation.</p>
+
+  <div class="exam-tip">
+    <strong>Key distinction:</strong> The debate about machine personhood tracks the broader debate about consciousness and functionalism. Functionalists (who say mental states are defined by functional roles) tend to be more open to machine consciousness. Those who think consciousness requires something more — subjective experience, biological substrate, genuine intentionality — are more sceptical. Always link your answer about AI to your theory of consciousness.
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION III: CONSCIOUSNESS -->
+<!-- ============================================================ -->
+<section class="section" id="consciousness">
+  <div class="section-number">Section III</div>
+  <h2>Consciousness</h2>
+  <p class="section-intro">How does subjective experience arise from physical processes? The mind-body problem is one of the hardest problems in philosophy — and it is absolutely central to Paper 1. Know every position and its objections cold.</p>
+
+  <h3 id="mind-body">The Mind-Body Problem</h3>
+
+  <p>The <em>mind-body problem</em> asks: what is the relationship between mental states (thoughts, experiences, beliefs, desires) and physical states (brain states, neural processes)? The problem is ancient but given its modern form by Descartes.</p>
+
+  <p>There are two broad families of solutions:</p>
+  <ul>
+    <li><strong>Dualist positions:</strong> Mind and body are distinct kinds of thing (substance dualism, property dualism)</li>
+    <li><strong>Monist positions:</strong> There is only one kind of thing — either matter (physicalism/materialism) or mind (idealism)</li>
+  </ul>
+
+  <h3 id="descartes-found">Descartes' Foundationalism and Radical Doubt</h3>
+
+  <h4>Foundationalism</h4>
+  <p>Foundationalism in epistemology is the view that knowledge is structured like a building: there are basic, foundational beliefs that are certain and self-justifying, and all other beliefs are built on top of them. Descartes' project in the <em>Meditations</em> is to find these foundations by stripping away everything uncertain.</p>
+
+  <h4>Radical (Methodological) Doubt</h4>
+  <p>Descartes employs <em>radical doubt</em> — a thought experiment in which he tries to doubt everything that can possibly be doubted. His method proceeds in waves:</p>
+  <ol>
+    <li><strong>Senses are unreliable:</strong> The senses sometimes deceive us (mirages, illusions, perceptual errors). So we cannot fully trust them.</li>
+    <li><strong>The dreaming argument:</strong> Could I be dreaming right now? If so, everything I perceive might be illusory. Even mathematical truths could be errors in a dream.</li>
+    <li><strong>The Evil Demon (<em>Malin génie</em>):</strong> Could an all-powerful evil demon be deceiving me about everything — even the most basic logical and mathematical truths? If so, I can be certain of nothing external.</li>
+  </ol>
+  <p>What survives even the Evil Demon hypothesis? The Cogito: even if I am being deceived, <em>I must exist to be deceived</em>. The act of doubting proves there is a doubter. "I think, therefore I am" is the one indubitable truth.</p>
+
+  <h4>Substance Dualism — and its Problems</h4>
+  <p>Descartes concludes that the self is essentially a <em>thinking substance</em> (mind) distinct from the body (extended substance). But this creates the problem of how they interact. The <em>interaction problem</em>: how does an immaterial mind move a physical body? Descartes' pineal gland answer is unsatisfying. More fundamentally, the idea of causal interaction between wholly different substances seems mysterious — how can something non-spatial affect something spatial?</p>
+  <p>Later dualists tried to avoid this: <em>occasionalism</em> (God mediates all mind-body interaction — Malebranche), <em>pre-established harmony</em> (God pre-coordinates mind and body — Leibniz), <em>epiphenomenalism</em> (mind is a causally inert byproduct of brain processes — Huxley).</p>
+
+  <h3 id="ryle">The "Ghost in the Machine" and the Category Mistake</h3>
+
+  <h4>Gilbert Ryle</h4>
+  <p>In <em>The Concept of Mind</em> (1949), Ryle mounted one of the most powerful attacks on Cartesian dualism. He argued that Descartes committed a <em>category mistake</em> — treating mental concepts as if they referred to a hidden inner substance, when in fact they describe dispositions, tendencies, and capacities of whole persons.</p>
+
+  <div class="concept-box">
+    <h4>The Category Mistake — Ryle's University Example</h4>
+    <p>A visitor tours Oxford University. He sees the colleges, the libraries, the playing fields, the administrative offices. Having seen all of this, he asks: "But where is the University?" He has made a category mistake — he expects the University to be another thing of the same type as the buildings, but it is not. The University is the organisation and functioning of all those things together, not an additional mysterious entity alongside them.</p>
+    <p>Similarly, Descartes looks at the body — the nervous system, the brain — and then asks: "But where is the mind?" He expects the mind to be another thing (a non-physical substance) alongside the body. This is a category mistake. Mental concepts do not refer to a ghost in the bodily machine; they refer to the ways in which persons behave and are disposed to behave.</p>
+  </div>
+
+  <p>For Ryle, statements like "she knows how to ride a bicycle" or "he is curious" describe <em>dispositional</em> facts — not facts about inner mental states hidden behind behavior, but facts about how people are disposed to act in various circumstances. This is a form of philosophical behaviourism about mind.</p>
+
+  <h4>Problems with Ryle's View</h4>
+  <p>Ryle's behaviourist analysis seems inadequate for explaining the subjective, qualitative character of experience — the <em>qualia</em>. The redness of red, the painfulness of pain, the taste of coffee — these seem to be inner, private experiences that cannot be fully captured by behavioral dispositions. A perfect behavioral duplicate (a philosophical zombie — someone who behaves exactly like a human but has no inner experience) would, if conceivable, show that Ryle's analysis is insufficient.</p>
+
+  <h3 id="other-minds">The Problem of Other Minds</h3>
+
+  <p>The <em>problem of other minds</em> is this: how can I know that other people have minds, consciousness, or subjective experiences? I have immediate, direct access to my own experience, but I can only observe others' behavior and physical states. I cannot observe their consciousness directly.</p>
+
+  <p><strong>The Argument from Analogy:</strong> The classical response is that I know, by direct acquaintance, that my behavior (e.g., writhing in pain) is correlated with my inner experience of pain. When I observe similar behavior in others, I infer by analogy that they too have inner experiences. But this is a very weak inference — it generalises from one case (myself) to all others.</p>
+
+  <p><strong>Wittgenstein's challenge:</strong> Wittgenstein's private language argument (in <em>Philosophical Investigations</em>) suggests that a purely private inner language is incoherent — meaning is established by public, shared linguistic practices. This suggests that the very concepts we use to describe our "inner" states are inherently intersubjective. The problem of other minds may be misformulated.</p>
+
+  <p><strong>Why it matters:</strong> The problem of other minds affects: (a) the grounds for attributing personhood to AI (Turing Test), (b) the grounds for attributing moral status to animals, (c) the relationship between self and other (Section V). It reveals a deep limit on what we can know about consciousness in others.</p>
+
+  <h3 id="functionalism">Functionalism and the Cartesian Theatre</h3>
+
+  <h4>Functionalism</h4>
+  <p>Functionalism (associated with Hilary Putnam, Jerry Fodor, and others) holds that <strong>mental states are defined by their functional roles</strong> — by their causal relationships to sensory inputs, behavioral outputs, and other mental states — not by the particular physical stuff they are realized in.</p>
+
+  <p>Pain, for instance, is the state that is typically caused by tissue damage, that causes distress and avoidance behavior, that interacts with beliefs and desires to produce particular actions. Any system that has states playing these functional roles has pain — whether it is realized in neurons, silicon, or something else entirely. This is <em>multiple realizability</em>: the same mental state can be realized in different physical substrates.</p>
+
+  <div class="debate">
+    <div class="debate-side for">
+      <div class="debate-label">Functionalism supports machine minds</div>
+      <p style="font-size:14px;">If mental states are defined functionally, then in principle a computer or robot could have mental states — even consciousness — if it has the right functional organization. This makes AI personhood conceptually possible. It also provides a scientific framework: cognitive science and AI research study the functional organization of minds.</p>
+    </div>
+    <div class="debate-side against">
+      <div class="debate-label">Qualia and the "what it's like"</div>
+      <p style="font-size:14px;">Ned Block distinguishes <em>access consciousness</em> (information available for reasoning and behavior) from <em>phenomenal consciousness</em> (subjective experience — qualia). Functionalism can account for access consciousness but arguably not phenomenal consciousness. A functional duplicate of you might lack the inner "what it's like." Jackson's Mary argument and Nagel's "What is it like to be a bat?" both press this point.</p>
+    </div>
+  </div>
+
+  <h4>The Cartesian Theatre</h4>
+  <p>The <em>Cartesian Theatre</em> is a term coined by Daniel Dennett (in <em>Consciousness Explained</em>, 1991) to describe the intuitive but misleading picture of consciousness as a kind of inner theatre, with a central "self" watching a show. We implicitly imagine that all the brain's processing eventually leads to a single central place where consciousness "happens" and the self "watches."</p>
+
+  <p>Dennett argues this picture is an illusion — there is no Cartesian Theatre, no single place in the brain where it all comes together for a central observer. Consciousness is not localized but is a distributed, parallel process. The unity of experience is a kind of confabulation — the brain constructs a narrative of unified experience after the fact. There is no ghost in the machine; there is just the machine, and the appearance of a unified self is itself produced by the machine.</p>
+
+  <h4>Physicalist Theory of Mind</h4>
+  <p><em>Physicalism</em> (or materialism) holds that everything that exists is physical — including the mind. Mental states are just brain states. There are different versions:</p>
+  <ul>
+    <li><strong>Type Identity Theory:</strong> Every type of mental state is identical to a type of brain state. Pain = C-fibre firing. Problem: this makes it impossible for creatures with different brains (or silicon chips) to have the same mental states (lacks multiple realizability).</li>
+    <li><strong>Token Identity Theory:</strong> Each particular mental event is identical to a particular physical event, but different types of mental states can be realized by different physical states in different creatures.</li>
+    <li><strong>Eliminative Materialism (Churchland):</strong> Folk psychology (belief, desire, pain) is a folk theory that will eventually be replaced by a mature neuroscience. Mental states as we conceive of them don't exist — we will eventually describe everything in purely neural terms.</li>
+    <li><strong>Functionalism</strong> (as above): a version of physicalism that emphasizes functional organization over specific physical constitution.</li>
+  </ul>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION IV: FREEDOM -->
+<!-- ============================================================ -->
+<section class="section" id="freedom">
+  <div class="section-number">Section IV</div>
+  <h2>Freedom</h2>
+  <p class="section-intro">Are humans genuinely free? Or is every choice we make determined by prior causes — genetics, upbringing, brain chemistry, physical laws? The free will debate is fundamental to our understanding of moral responsibility, authenticity, and what it means to be a human agent.</p>
+
+  <h3 id="freewill">Free Will</h3>
+  <p><em>Free will</em> is, broadly, the capacity to make genuine choices — choices that are truly one's own and are not simply the inevitable result of prior causes. Most accounts require that, for a will to be free, the agent could have done otherwise in identical circumstances.</p>
+
+  <p>Free will is not just a metaphysical curiosity. It is the foundation of:</p>
+  <ul>
+    <li><strong>Moral responsibility:</strong> We only blame or praise people for actions they freely chose.</li>
+    <li><strong>Authenticity:</strong> Genuine selfhood (for existentialists) requires freedom.</li>
+    <li><strong>Dignity:</strong> Kant's claim that persons have infinite dignity rests on their capacity for free, rational self-legislation.</li>
+    <li><strong>Criminal justice:</strong> The entire punitive system presupposes agents who could have chosen otherwise.</li>
+  </ul>
+
+  <h3 id="determinism">Determinism</h3>
+
+  <p><em>Determinism</em> is the thesis that every event — including every human choice and action — is the inevitable result of prior causes operating according to the laws of nature. Given the complete state of the universe at any moment plus the laws of nature, every future state is fixed. There is no room for genuine alternatives.</p>
+
+  <h4>Hard Determinism</h4>
+  <p><em>Hard determinism</em> holds that determinism is true <em>and</em> free will is incompatible with determinism (they are <em>incompatibilists</em>), therefore free will does not exist. No one is ever genuinely free. Moral responsibility, as traditionally conceived, is therefore an illusion.</p>
+
+  <p><strong>Arguments for hard determinism:</strong></p>
+  <ul>
+    <li>The causal closure of the physical world: every physical event has a physical cause. Mental events are physical events (or caused by physical events). Therefore every mental event (including every decision) is causally determined.</li>
+    <li>Neuroscience: Libet's experiments (1983) showed that brain activity (the "readiness potential") precedes conscious awareness of a decision to move by ~350ms. Does this show that "decisions" are post-hoc rationalizations of brain processes that are already underway?</li>
+    <li>If quantum indeterminism gives us true randomness at the physical level, this doesn't help — random choices are not free choices. Freedom requires authorship of actions, not randomness.</li>
+  </ul>
+
+  <p><strong>Implications:</strong> If hard determinism is true, no one deserves punishment or reward — they could not have done otherwise. This might support rehabilitation-based rather than retributive justice. Strawson argues (against this) that the reactive attitudes (praise, blame, resentment) are so fundamental to human life that they cannot simply be abandoned on theoretical grounds.</p>
+
+  <h4>Soft Determinism</h4>
+  <p><em>Soft determinism</em> (a form of compatibilism — see below) holds that determinism is true but that a limited, compatibilist sense of freedom is preserved. Actions are free when they flow from the agent's own desires, character, and deliberation — even if those desires and that character are themselves determined. The relevant distinction is not between determined and undetermined, but between actions caused by the agent's own psychology and actions caused by external compulsion.</p>
+
+  <h3 id="compatibilism">Compatibilism and Incompatibilism</h3>
+
+  <h4>Incompatibilism</h4>
+  <p><em>Incompatibilism</em> is the view that free will and determinism are logically incompatible — they cannot both be true. If determinism is true, there is no free will (hard determinism). If there is free will, determinism must be false (libertarian free will).</p>
+
+  <p><strong>Libertarian free will</strong> (not to be confused with political libertarianism) holds that humans genuinely have free will, and that this is incompatible with determinism, so determinism must be false (at least for human action). The free will is a power of the agent that is not reducible to prior causes. This is sometimes associated with the agent causation view — persons are causes in a special, irreducible sense.</p>
+
+  <p><strong>Van Inwagen's Consequence Argument:</strong> If determinism is true, our actions are the consequences of the laws of nature and events in the remote past. We have no control over the laws of nature or events in the remote past. Therefore, we have no control over the consequences of these things — including our own actions. This is a powerful argument for incompatibilism.</p>
+
+  <h4>Compatibilism</h4>
+  <p><em>Compatibilism</em> holds that free will and determinism are <em>compatible</em> — both can be true simultaneously. Compatibilists redefine free will so that it does not require being undetermined.</p>
+
+  <p><strong>Classic compatibilist analysis (Hume, Mill, Schlick):</strong> An action is free if it is caused by the agent's own desires, beliefs, and intentions — not by external compulsion (coercion, addiction, hypnosis). A person who acts from their own motivations is free, even if those motivations are themselves determined. Freedom = acting according to your own will, not absence of causation.</p>
+
+  <p><strong>Hierarchical desires (Frankfurt):</strong> Harry Frankfurt develops a more sophisticated compatibilism. Persons have first-order desires (wanting to eat pizza) and second-order desires (wanting to want to exercise, not want to eat pizza). Free will consists in acting according to the desires you endorse at the higher level — having the will you want to have. An addict who acts on desires they themselves repudiate (wishing they didn't have the craving) lacks free will; someone who acts on desires they endorse is free, even if determined.</p>
+
+  <p><strong>Objections to compatibilism:</strong> Critics (hard incompatibilists) say that compatibilism is "a wretched subterfuge" (Kant) — it redefines freedom so that it no longer requires genuine openness of alternatives. The "could have done otherwise" condition is glossed over. If determinism is true, you couldn't have done otherwise in any meaningful sense — you just acted as your determined nature dictated. This is not real freedom; it is just acting in accordance with your prison.</p>
+
+  <h3 id="existentialism">Existentialism: Authenticity, Bad Faith, and the Project</h3>
+
+  <p>Existentialists — particularly Jean-Paul Sartre — hold that freedom is the most fundamental and inescapable feature of human existence. We are "condemned to be free." There is no pre-given human essence that determines what we must be — existence precedes essence.</p>
+
+  <h4>Existence Precedes Essence</h4>
+  <p>Traditional philosophy (especially Plato and Christian thought) held that there is a fixed human essence — a human nature or soul that defines what we are. Sartre reverses this: humans first <em>exist</em>, then create their essence through their choices. There is no God who designed us with a purpose; there is no fixed human nature. We are what we make of ourselves. This makes us radically free — and radically responsible.</p>
+
+  <h4>Radical Freedom and Responsibility</h4>
+  <p>Sartre argues that we are always free to choose — even in extreme circumstances. A prisoner in chains is free to choose their attitude toward their captivity. Victor Frankl's experience in Nazi concentration camps supports this: even in the most extreme circumstances, one can choose one's inner response. This freedom cannot be escaped — even choosing not to choose is a choice.</p>
+  <p>With radical freedom comes radical responsibility. We cannot blame our choices on our nature, our upbringing, God, or society. Every choice is our own. This is existentialist <em>responsibility</em>: no excuses.</p>
+
+  <h4>Bad Faith (Mauvaise Foi)</h4>
+  <p><em>Bad faith</em> is Sartre's term for the self-deception by which we deny our freedom and responsibility. We pretend that we are determined — by our nature, our social role, our past, God's will — in order to avoid the anguish of freedom.</p>
+
+  <p>Sartre's famous example: the waiter who plays at being a waiter too perfectly — his movements, his manner, his whole being are "waiter." He is in bad faith — he identifies completely with his social role, denying the freedom he has to be otherwise. Contrast with a waiter who performs the role consciously, knowing they could choose to do something else.</p>
+
+  <p>Another example: a woman on a date who, when her companion takes her hand, pretends not to notice — leaving her hand lifelessly in his, neither withdrawing it (which would be a refusal) nor actively encouraging him (which would be a response). She suspends her agency to avoid making a choice. This is bad faith.</p>
+
+  <h4>Authenticity</h4>
+  <p><em>Authenticity</em> is the existentialist ideal: living with full awareness and acceptance of one's freedom and responsibility. The authentic person does not hide behind roles, excuses, or deterministic narratives. They confront their freedom, acknowledge the anguish it involves, and take genuine responsibility for their choices and their self-creation.</p>
+
+  <p>Authenticity does not mean being selfish or isolated. Sartre insists that genuine choice involves a recognition that in choosing for oneself, one chooses for humanity — our choices implicitly propose a way of being human. Authentic existence is not solipsism.</p>
+
+  <h4>The Project</h4>
+  <p>Sartre uses <em>project</em> (<em>projet</em>) to describe the way in which human existence is always oriented toward a future that it is choosing. We are always in the middle of a project — not a fixed object but a being that is always "ahead of itself," always choosing what to be. A project is not just a plan but the totality of one's engaged being-in-the-world. To exist as a human is always to be projecting oneself toward possibilities.</p>
+
+  <div class="exam-tip">
+    <strong>Key tension:</strong> Existentialism asserts radical freedom — we are not determined by our nature. But the irrationalists (Darwin, Freud) suggest we are largely driven by forces (evolution, the unconscious) beyond our rational control. And hard determinism says freedom is illusory altogether. A strong essay will engage with these tensions rather than presenting one view in isolation.
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION V: SELF & THE OTHER -->
+<!-- ============================================================ -->
+<section class="section" id="self-other">
+  <div class="section-number">Section V</div>
+  <h2>The Self and the Other</h2>
+  <p class="section-intro">Is the self a self-contained, autonomous entity? Or is selfhood inherently relational — constituted through encounter with others? This section explores the tension between solipsism and intersubjectivity.</p>
+
+  <h3>Solipsism</h3>
+  <p><em>Solipsism</em> is the philosophical position that only one's own mind can be known to exist. Strictly, the solipsist holds that the external world and other minds are unknowable, or perhaps do not exist — that only one's own consciousness is certainly real.</p>
+
+  <p>Solipsism is the logical extreme of Cartesian epistemology: if we start from the certain foundation of the Cogito and try to build outward, we face the problem of other minds and the problem of the external world. Descartes himself uses God to escape solipsism — since God is not a deceiver, the external world must exist roughly as we perceive it. But if God's existence is in doubt (as it is for many modern thinkers), the threat of solipsism is more serious.</p>
+
+  <p>No philosopher has seriously <em>defended</em> solipsism — it is usually raised as a <em>reductio ad absurdum</em> of the Cartesian starting point: if solipsism is the logical implication of your epistemology, something must be wrong with your epistemology. The point is the problem: how do I <em>know</em> there are other minds?</p>
+
+  <p><strong>Wittgenstein's response:</strong> The private language argument suggests that even the concept of my own experience presupposes a public, shared language — and thus presupposes a community of other speakers. Solipsism is not only unprovable but ultimately incoherent, because the language in which it is formulated is inherently public.</p>
+
+  <h3>Intersubjectivity</h3>
+  <p><em>Intersubjectivity</em> is the idea that human subjectivity — consciousness, experience, meaning — is not isolated but is fundamentally constituted through relationship and shared meaning with others. The self does not exist prior to its encounter with others; it is formed through and in that encounter.</p>
+
+  <p><strong>Husserl:</strong> Edmund Husserl, the founder of phenomenology, recognised intersubjectivity as a central problem. The phenomenological world — the world as experienced — is not a private world but a shared, intersubjective one. Other people are not merely objects I infer to have minds (the argument from analogy) but are encountered as subjects — their subjectivity is given to me in a special, quasi-direct way through what Husserl calls <em>empathy</em> (Einfühlung) or <em>analogical apperception</em>.</p>
+
+  <p><strong>Hegel's Master-Slave Dialectic:</strong> Hegel argues in the <em>Phenomenology of Spirit</em> that self-consciousness requires recognition by another self-consciousness. The self becomes aware of itself as a self only through the other's gaze. Two self-consciousnesses encounter each other in a life-and-death struggle for recognition. The outcome is the Master-Slave relationship: the Master is recognized by the Slave but gets only the recognition of a non-free consciousness, which is unsatisfying. The Slave, through labour and service, develops genuine self-consciousness. This suggests that the self is inherently social and that freedom requires mutual recognition.</p>
+
+  <p><strong>Sartre and the Other:</strong> For Sartre, the encounter with the Other is a challenge to my freedom. The Other's gaze (le regard) objectifies me — turns me from a free subject into an object, a "thing" with a fixed nature (in their eyes). I experience shame or pride when caught by the Other's gaze because the Other's look threatens to fix my identity. Sartre's relations with Others are fundamentally conflictual — we are each a threat to the other's freedom. Hell is other people.</p>
+
+  <p><strong>Levinas and the Face:</strong> Emmanuel Levinas offers a very different account. The encounter with the Other's <em>face</em> (le visage) is the foundation of ethics. The face of the Other makes an absolute ethical demand on me — "Thou shalt not kill." The Other is not a threat but a responsibility. Ethics, for Levinas, precedes ontology — the primary philosophical fact is not "I am" (Descartes) or "Being is" (Heidegger), but the ethical obligation created by the face of the Other.</p>
+
+  <div class="exam-tip">
+    <strong>Key move:</strong> The Self/Other section is a bridge between the epistemological questions (how do I know other minds exist?) and the ethical questions (what do I owe to others?). Make sure you can articulate why intersubjectivity matters — it grounds moral obligation, shapes personal identity, and undermines solipsism.
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION VI: IDENTITY -->
+<!-- ============================================================ -->
+<section class="section" id="identity">
+  <div class="section-number">Section VI</div>
+  <h2>Identity</h2>
+  <p class="section-intro">What makes you the same person you were yesterday — or ten years ago? Is personal identity given by the body, the mind, memory, or narrative? And what is the relationship between individual and cultural identity?</p>
+
+  <h3>Personal Identity</h3>
+  <p><em>Personal identity</em> concerns what makes a person the numerically same individual over time. This is distinct from questions of character or personality — even if your character changes dramatically, there is still a question of whether <em>you</em> are the same individual.</p>
+
+  <p><strong>Why it matters:</strong> Personal identity grounds moral responsibility (you are responsible for what you did yesterday because you are the same person), punishment (it would be unjust to punish someone for a crime committed by a different person), and our concern for our own futures (you have special reason to care about your future self because it is you).</p>
+
+  <h3>Identity Over Time</h3>
+
+  <h4>The Soul Theory</h4>
+  <p>The simplest answer: personal identity consists in the persistence of the same immaterial soul. You are the same person today as yesterday because you have the same soul. This is Plato's and Descartes' implicit view.</p>
+  <p><strong>Problems:</strong> How do we identify or track souls? We cannot observe them. If souls are non-physical, we have no way of verifying whether someone still has "the same" soul. It also gives no guidance for hard cases (gradual neural replacement, teleportation, etc.).</p>
+
+  <h4>Bodily/Biological Continuity</h4>
+  <p>Personal identity consists in the continuity of the same living body (or brain). You are the same person because you have the same body (or at least the same brain — the brain being the seat of psychological characteristics).</p>
+  <p><strong>Problems:</strong> The body changes continuously (cells are replaced, we grow, age). Is the ship of Theseus (with all parts gradually replaced) still the same ship? Gradual physical continuity seems insufficient for strong personal identity. Also, thought experiments — what if your brain were transplanted into another body? Most people's intuition is that you would go where your brain goes — suggesting psychology matters more than biology.</p>
+
+  <h4>Psychological Continuity — Locke's Memory Theory</h4>
+  <p>Locke argues that personal identity consists in <em>continuity of consciousness</em> — specifically, memory. You are the same person as the child who did something if, and only if, you can remember (in principle) doing it. Your identity extends as far back as your memory reaches.</p>
+
+  <p><strong>Reid's brave officer objection:</strong> A young boy is flogged for stealing. The young boy grows up to be a brave officer who remembers being flogged. The officer is later a general who can remember capturing an enemy standard but no longer remembers being flogged. By Locke's theory: the officer = the boy (he remembers); the general ≠ the officer (he doesn't remember being flogged); but the general is the same person as the officer (by transitivity of identity). Contradiction. Memory theory seems to violate the transitivity of identity.</p>
+
+  <h4>Psychological Continuity — Parfit's Account</h4>
+  <p>Derek Parfit (in <em>Reasons and Persons</em>, 1984) develops the most sophisticated account of personal identity. He argues that personal identity is not what matters. What matters is <em>psychological continuity</em> — overlapping chains of direct psychological connections (memories, intentions, beliefs, desires). But personal identity is not necessary for this to matter — in cases of fission (e.g., a brain split between two bodies), there may be psychological continuity without determinate personal identity.</p>
+
+  <p>Parfit's radical conclusion: our deep concern for our own futures (and our sense that we are special unified selves) is based on an illusion. There is no further fact about personal identity beyond facts about psychological continuity. This undermines the rationality of self-interest and has implications for ethics — it grounds a more impartial concern for others.</p>
+
+  <h4>Hume's Bundle Theory (revisited)</h4>
+  <p>Hume denies that there is a persistent self at all. When he introspects, he finds only a bundle of perceptions — no persisting "I" that underlies them. The self is a fictional unity constructed by the mind's associative tendencies. There is no self over and above the series of experiences.</p>
+  <p>This aligns with Buddhist philosophy's doctrine of <em>anatta</em> (no-self), which Parfit explicitly acknowledges.</p>
+
+  <h4>Narrative Identity (Ricoeur, MacIntyre)</h4>
+  <p>Paul Ricoeur and Alasdair MacIntyre propose that personal identity is constituted through <em>narrative</em> — the story we tell about ourselves and that others tell about us. The self is not a substance or a bundle but a narrative construction — an ongoing project of self-interpretation. To be a person is to live in and through a story.</p>
+
+  <h3>Cultural Identity</h3>
+  <p><em>Cultural identity</em> concerns how belonging to a culture — with its shared language, history, practices, values, and traditions — shapes who we are. This intersects with personal identity in complex ways.</p>
+
+  <p><strong>Taylor's "politics of recognition":</strong> Charles Taylor argues that identity is fundamentally dialogical — formed in dialogue with others. Cultural belonging is not merely an external fact about a person but constitutive of their identity. The denial of cultural recognition (as when a minority culture is denigrated or erased) is not just an injustice but a harm to identity. Hence the importance of multiculturalism and the recognition of cultural difference.</p>
+
+  <p><strong>Tensions:</strong></p>
+  <ul>
+    <li>Does cultural identity constrain freedom and authentic self-creation (Sartre's view might suggest this)?</li>
+    <li>Can cultural identity conflict with personal identity — and if so, which takes priority?</li>
+    <li>Foucault and relativists suggest that "cultural identity" is itself a power-laden construction — cultures are not homogeneous, and claims of cultural identity can mask internal power relations.</li>
+    <li>The cosmopolitan (Nussbaum, Appiah) challenges the priority given to cultural identity: our fundamental identity as human beings (or as world citizens) should take precedence over cultural particularity.</li>
+  </ul>
+
+  <p><strong>Link to essentialism:</strong> Claims about cultural identity often rest on essentialist assumptions — that there is a fixed essence to (e.g.) being French or being Muslim. Post-colonial thought (Said, Bhabha) challenges this: cultural identities are hybrids, the product of encounter and exchange, never pure. The categories are politically constructed.</p>
+</section>
+
+<!-- ============================================================ -->
+<!-- EXAM STRATEGY -->
+<!-- ============================================================ -->
+<section class="section" id="exam-strategy">
+  <div class="section-number">Exam Strategy</div>
+  <h2>Paper 1 Section A — How to Excel</h2>
+  <p class="section-intro">Knowing the content is necessary but not sufficient. The IB rewards philosophical thinking — structured argumentation, critical engagement, and genuine philosophical depth. Here is what you need to do in the exam room.</p>
+
+  <h3>Understanding the Assessment</h3>
+  <p>Paper 1 Section A presents <strong>short stimulus texts</strong> (often quotes from philosophers or thought-provoking statements) and asks you to respond philosophically. You must demonstrate:</p>
+  <ul>
+    <li><strong>Knowledge and understanding</strong> of the philosophical content</li>
+    <li><strong>Critical thinking</strong> — evaluating arguments, identifying strengths and weaknesses</li>
+    <li><strong>Philosophical analysis</strong> — unpacking concepts, making distinctions, drawing implications</li>
+    <li><strong>Balanced argumentation</strong> — considering multiple perspectives</li>
+  </ul>
+
+  <h3>Essay Structure</h3>
+  <p>A strong response will typically:</p>
+  <ol>
+    <li><strong>Identify and clarify the philosophical issue</strong> raised by the stimulus. Unpack the key concepts. Don't assume they are obvious.</li>
+    <li><strong>Present the strongest version of the main argument</strong>. Identify the philosopher(s) whose view is invoked. Articulate their position clearly.</li>
+    <li><strong>Raise objections and counter-arguments</strong> from other perspectives. Show you can think from multiple standpoints.</li>
+    <li><strong>Evaluate</strong> — which view is stronger and why? Take a position and defend it.</li>
+    <li><strong>Conclude</strong> with a nuanced, philosophically honest answer — acknowledging remaining difficulties.</li>
+  </ol>
+
+  <h3>Key Synoptic Connections to Make</h3>
+  <div class="terms-grid">
+    <div class="term">
+      <div class="term-name">Rationalism → Free Will</div>
+      <div class="term-def">Rationalists like Kant support libertarian free will — rational beings are autonomous, self-legislating. Empiricists/physicalists tend toward determinism.</div>
+    </div>
+    <div class="term">
+      <div class="term-name">Consciousness → Personhood</div>
+      <div class="term-def">Your theory of consciousness determines who you think counts as a person and deserves moral status. Functionalists are more inclusive; those who require phenomenal consciousness are more restrictive.</div>
+    </div>
+    <div class="term">
+      <div class="term-name">Existentialism → Identity</div>
+      <div class="term-def">Sartre: no fixed essence, identity is freely created. Contrast with culturally-constituted identity (Taylor) and Hume's bundle theory (no self at all).</div>
+    </div>
+    <div class="term">
+      <div class="term-name">Determinism → Responsibility</div>
+      <div class="term-def">If hard determinism is true, moral responsibility collapses. Compatibilism tries to salvage responsibility. Existentialism insists on radical responsibility despite acknowledging situatedness.</div>
+    </div>
+    <div class="term">
+      <div class="term-name">Other Minds → Intersubjectivity</div>
+      <div class="term-def">The problem of other minds (epistemology) connects to intersubjectivity (who we are) and ethics (what we owe others). Levinas grounds ethics in the encounter with the Other's face.</div>
+    </div>
+    <div class="term">
+      <div class="term-name">Human Nature → All Topics</div>
+      <div class="term-def">Your view of human nature shapes everything: what personhood requires, whether consciousness can be mechanically realized, whether freedom is possible, and what makes identity persist.</div>
+    </div>
+  </div>
+
+  <h3>Common Mistakes to Avoid</h3>
+  <ul>
+    <li><strong>Merely listing views</strong> without evaluating them. Examiners want philosophical analysis, not a catalogue.</li>
+    <li><strong>Treating categories as monolithic.</strong> "Rationalists believe X" is less impressive than "Plato believes X, while Descartes holds a related but distinct view Y because..."</li>
+    <li><strong>Ignoring the strongest objections</strong> to the view you defend. Engaging with the best counter-arguments demonstrates genuine philosophical thinking.</li>
+    <li><strong>Neglecting to define key terms.</strong> What you mean by "consciousness," "free will," or "personal identity" matters enormously — different definitions yield different conclusions.</li>
+    <li><strong>Not reaching a conclusion.</strong> A good philosophy essay takes a position. "Both sides have good points" is not enough — you must adjudicate.</li>
+    <li><strong>Confusing the logical with the empirical.</strong> Philosophy is concerned with conceptual analysis and logical relationships, not just empirical facts. Ground your arguments philosophically.</li>
+  </ul>
+
+  <h3>Quick Reference — All Key Terms Defined</h3>
+  <div class="terms-grid" style="max-width:100%;">
+    <div class="term"><div class="term-name">Tabula rasa</div><div class="term-def">Blank slate — the mind at birth has no innate ideas (Locke).</div></div>
+    <div class="term"><div class="term-name">Cogito ergo sum</div><div class="term-def">"I think, therefore I am" — Descartes' indubitable foundational truth.</div></div>
+    <div class="term"><div class="term-name">Substance dualism</div><div class="term-def">Mind and body are distinct, non-reducible substances (Descartes).</div></div>
+    <div class="term"><div class="term-name">Category mistake</div><div class="term-def">Applying concepts from one logical type to another incorrectly (Ryle).</div></div>
+    <div class="term"><div class="term-name">Bundle theory</div><div class="term-def">The self is just a bundle of perceptions, with no underlying unifying "I" (Hume).</div></div>
+    <div class="term"><div class="term-name">Functionalism</div><div class="term-def">Mental states are defined by their functional roles, not physical substrate.</div></div>
+    <div class="term"><div class="term-name">Qualia</div><div class="term-def">The subjective, qualitative character of experience ("what it is like").</div></div>
+    <div class="term"><div class="term-name">Hard determinism</div><div class="term-def">All events are causally determined; free will is incompatible with this and therefore does not exist.</div></div>
+    <div class="term"><div class="term-name">Compatibilism</div><div class="term-def">Free will and determinism are compatible; freedom = acting from one's own desires.</div></div>
+    <div class="term"><div class="term-name">Bad faith</div><div class="term-def">Self-deceptive denial of one's freedom (Sartre).</div></div>
+    <div class="term"><div class="term-name">Authenticity</div><div class="term-def">Living with awareness and acceptance of one's radical freedom (existentialism).</div></div>
+    <div class="term"><div class="term-name">Intersubjectivity</div><div class="term-def">The idea that subjectivity and meaning are fundamentally shared and relational.</div></div>
+    <div class="term"><div class="term-name">Solipsism</div><div class="term-def">Only one's own mind can be known to exist.</div></div>
+    <div class="term"><div class="term-name">Will to power</div><div class="term-def">The fundamental drive to grow and overcome (Nietzsche).</div></div>
+    <div class="term"><div class="term-name">Paradigm shift</div><div class="term-def">A revolutionary change in scientific framework (Kuhn).</div></div>
+    <div class="term"><div class="term-name">Power/knowledge</div><div class="term-def">Knowledge and power are inseparable; truth is produced by power relations (Foucault).</div></div>
+    <div class="term"><div class="term-name">Sentience</div><div class="term-def">The capacity to feel pleasure and pain; proposed as the basis of moral status (Bentham).</div></div>
+    <div class="term"><div class="term-name">Cartesian theatre</div><div class="term-def">The misleading image of consciousness as a central inner screen watched by a self (Dennett).</div></div>
+    <div class="term"><div class="term-name">Chinese Room</div><div class="term-def">Searle's argument that syntax (symbol manipulation) does not constitute semantics (understanding).</div></div>
+    <div class="term"><div class="term-name">Turing Test</div><div class="term-def">A machine is intelligent if it can converse indistinguishably from a human (Turing).</div></div>
+    <div class="term"><div class="term-name">Anthropocentrism</div><div class="term-def">The view that humans are the central or most important entities in the moral universe.</div></div>
+    <div class="term"><div class="term-name">Incommensurability</div><div class="term-def">Different paradigms/frameworks cannot be directly compared by a neutral standard (Kuhn).</div></div>
+    <div class="term"><div class="term-name">Narrative identity</div><div class="term-def">Identity constituted through the stories we tell about ourselves (Ricoeur, MacIntyre).</div></div>
+  </div>
+
+  <blockquote>
+    "The unexamined life is not worth living."
+    <cite>— Socrates (Plato, <em>Apology</em>)</cite>
+  </blockquote>
+
+  <p style="margin-top:2rem; color: var(--ink-light); font-style:italic; font-size:15px;">Good luck. Philosophy rewards careful, patient thinking — take your time with each question, define your terms, and argue well.</p>
+
+</section>
+
+</div><!-- /content -->
+</main>
+
+<script>
+  // Highlight active nav link on scroll
+  const sections = document.querySelectorAll('[id]');
+  const navLinks = document.querySelectorAll('nav a');
+
+  function updateNav() {
+    let current = '';
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 120) current = section.id;
+    });
+    navLinks.forEach(link => {
+      link.style.background = '';
+      link.style.color = '';
+      if (link.getAttribute('href') === '#' + current) {
+        link.style.background = 'rgba(255,255,255,0.12)';
+        link.style.color = '#fff';
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateNav);
+  updateNav();
+</script>
+</body>
+</html>
